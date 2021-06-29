@@ -1,0 +1,122 @@
+.child{
+    display: flex;
+    justify-content: center;
+}
+.forms{
+   width:350px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+   
+    border-right: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 3px solid rgba(255,255,255,0.2);
+   max-height:700px;
+    background: rgba(221, 202, 202, 0.1);
+    font-family: cursive;
+    
+}
+
+.one{
+    display: flex;
+    justify-content: center;
+}
+.button{
+    width:150px
+}
+section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   
+background-attachment: fixed;
+}
+body{
+    background:linear-gradient(0deg, #69f3f3 ,#fc8ac9);
+    height:1000px
+}
+table{
+    margin-top: 20px;
+    width:700px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+   
+    border-right: 1px solid rgba(255,255,255,0.3);
+    background: rgba(124, 116, 116, 0.1);
+    border-bottom: 3px solid rgba(255,255,255,0.2);
+
+}
+tbody{
+    font-size: 15px;
+    font-weight:500;
+   
+}
+.button{
+  
+    display: flex;
+    justify-content: center;
+    background: rgb(236, 233, 233);
+    color: rgb(87, 84, 84);
+    width:90%;
+    max-width: 150px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border:0.1px solid rgb(201, 194, 194);
+    border-radius:35px ;
+    padding: 15px;
+    font-size: 17px;
+}
+.button:hover{
+    background: rgb(112, 113, 114);
+    color:rgb(255, 255, 255)
+}
+.bttn{
+  
+
+    background: rgb(236, 233, 233);
+    color: rgb(87, 84, 84);
+    height:30px;
+    width: 90px;
+    cursor: pointer;
+    /* margin-bottom: 20px; */
+    font-weight: 600;
+    border:0.1px solid rgb(201, 194, 194);
+    border-radius:25px ;
+    padding: 3px;
+    font-size: 17px;
+}
+.bttn:hover{
+    background: rgb(112, 113, 114);
+    color:rgb(255, 255, 255)
+}
+.buttn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    background: rgb(236, 233, 233);
+    color: rgb(87, 84, 84);
+   width:250px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 800;
+    border:0.1px solid rgb(201, 194, 194);
+    border-radius:35px ;
+    padding: 15px;
+    font-size: 17px;
+}
+.buttn:hover{
+    background: rgb(112, 113, 114);
+    color:rgb(255, 255, 255)
+}
+.bun{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: cursive;
+    font-size: 25px;
+}

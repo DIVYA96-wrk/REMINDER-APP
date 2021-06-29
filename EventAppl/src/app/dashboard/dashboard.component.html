@@ -1,0 +1,112 @@
+
+  
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+        <h1>Your Daily Events...</h1>
+        <div class="logout">
+            <button type="button" class="btn btn-outline-success my-2 my-sm-0 butn "(click)="LOGOUT()" >Log Out</button>
+        </div>
+    </nav> <br>
+    
+    
+    <h2>WELCOME , {{username}}</h2>
+
+
+ 
+    
+    
+ <section>
+
+<div class="container">
+    
+     
+    <div class="card one">
+        
+        <div class="imgBx" style="font-family: cursive;">
+            
+
+            <p>Notifications</p>  
+
+            
+        </div>
+        <div class="content">
+            <div *ngIf="(results.length==0)">
+                Hey,{{username}} looks like there is no special event today
+            </div>
+            <div *ngIf=(results)>
+                <p *ngFor="let elements of results" class="reminder"> &nbsp;
+
+                    Hey,{{username}} today is {{elements.Date}} <br> and the event is {{elements.Event}}!!!
+        
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <div class="card two">
+        <div class="imgBx">
+            <p >Events..</p>
+        </div>
+        <div class="content">
+            <div>
+                <p class="addtag">Want to add your future plans and events in to your Calender?</p>
+                <div class="dashboard"><button type="button" class="btn btn-primary  button" (click)="addevent()">Add
+                        event</button> </div><br> 
+                <p class="showtag">Want to show your past event history from your calender?</p> <br>
+                <div class="showhistory">
+                    <button type="button" class="btn btn-primary  button" (click)="showhistory()">Show History</button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+</section> 
+</body>
+<!-- <br> <br>
+<div class="showhistor">
+    <h1>WELCOME , {{username}}</h1>
+</div> <br> <br>
+
+<div class="row">
+    <div class="col-6 remind" *ngIf=(results)>
+
+        <p *ngFor="let elements of results" class="reminder"> &nbsp;
+
+            Hey,{{username}} today is {{elements.Date}} <br> and the event is {{elements.Event}}!!!
+
+        </p>
+    </div>
+    <div class="col-6">
+        <div class="dashboard">
+
+
+            <div class="addevent">
+
+                <p class="addtag">Want to add your future plans and events in to your Calender?</p>
+                <div class="dashboard"><button type="button" class="btn btn-primary btn-lg" (click)="addevent()">Add
+                        event</button></div>
+
+
+            </div>
+        </div>
+
+        <br>
+
+        <div class="showhistory">
+            <div>
+                <p class="showtag">Want to show your past event history from your calender?</p> <br>
+                <div class="showhistory">
+                    <button type="button" class="btn btn-primary btn-lg" (click)="showhistory()">Show History</button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div> -->

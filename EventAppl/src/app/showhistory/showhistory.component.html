@@ -1,0 +1,123 @@
+<body>
+<section>
+    <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">   
+<div *ngIf="(show)">
+    
+    <table class="table  table-hover" >
+        <thead>
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Event</th>
+                <th scope="col">Update</th>
+
+            </tr>
+        </thead>
+        <tbody id="contents">
+           
+            <tr   *ngFor="let elements of results" cdkDrag >
+                
+                  
+                <td>{{elements["Date"]}}</td>
+                <td  >{{elements["Event"]}}</td>
+                <td ><button  type="button" class="btn btn-primary bttn"
+                        (click)="delete(userid,elements.Date,elements.Event)">Delete</button> &nbsp; &nbsp; <button type="button"
+                        class="btn btn-primary bttn" (click)="update(userid,elements.Date,elements.Event)">Update</button>
+                </td>
+           
+            </tr>
+        
+
+
+        </tbody>
+    </table>
+    </div>
+
+</div>
+
+<!-- <div class="child">
+    <app-updatepage [items]=" updateresult" (onupdate)="update1($event)" *ngIf=(upd)></app-updatepage>
+</div> -->
+<div class="updSection" *ngIf=(upd)>
+    <div class="full">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 forms">
+
+                <form [formGroup]=eventForm>
+                    <h2>Update Here </h2>
+
+                    <div class="mb-3">
+                        <label for="example2" class="form-label">Userid</label>
+                        <input type="text" class="form-control" id="example2" formControlName="userid">
+
+                    </div>
+                    <div *ngIf="(eventForm.get('userid')?.touched||eventForm.get('userid')?.dirty)&&
+                    eventForm.get('userid')?.errors">
+                    <p>*Invalid Userid !!</p>
+                </div>
+
+                    <div class="mb-3">
+                        <label for="example" class="form-label">Event</label>
+                        <input type="text" class="form-control" id="example" formControlName="events">
+
+                    </div>
+                    <div *ngIf="(eventForm.get('events')?.touched||eventForm.get('events')?.dirty)&&
+                    eventForm.get('events')?.errors">
+                    <p>*Please Enter an Event !!</p>
+                </div>
+                   
+
+
+                    <div class="mb-3">
+                        <label for="example1" class="form-label">Date</label>
+                        <input type="date" class="form-control" id="example1" formControlName="date">
+
+                    </div>
+                    <div *ngIf="(eventForm.get('date')?.touched||eventForm.get('date')?.dirty)&&
+                    eventForm.get('date')?.errors">
+                    <p>*Please Enter a Date !!</p>
+                </div>
+                   
+
+
+
+                   
+
+                    <br><br>
+                    <div class="one">
+                        <button type="button" class="btn btn-primary button" (click)="update1()">Update</button>
+                        &nbsp; &nbsp;
+                        <button type="button" class="btn btn-primary button" (click)="cancel()">Cancel</button>
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="col-4"></div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<br> <br>
+<div class="bun">
+<p class="bun" *ngIf="(results.length==0)">Click on the Showhistory button to see the listed form of your Events...</p>
+</div>
+<section>
+    
+    <div >
+        
+        <div *ngIf="(results.length==0)">
+            
+            <button type="button" class="btn btn-primary btn-lg buttn" (click)="showhistory()">Show History</button> </div> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+         <div>
+            <button type="button" class="btn btn-primary btn-lg buttn" (click)="back()">Back</button>
+        </div>
+        
+
+    </div>
+</section>
+    
+
+</body>

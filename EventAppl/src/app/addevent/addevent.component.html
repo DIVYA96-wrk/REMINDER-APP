@@ -1,0 +1,58 @@
+<section>
+<div class="full">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 forms">
+
+            <form [formGroup]=eventForm>
+                <h2>{{title}}</h2>
+                <br>
+
+                <div class="mb-3">
+                    <label for="example2" class="form-label">Userid</label>
+                    <input type="text" class="form-control" id="example2" formControlName="userid">
+
+                </div>
+                <div *ngIf="(eventForm.get('userid')?.touched||eventForm.get('userid')?.dirty)&&
+                eventForm.get('userid')?.errors">
+                <p>*Invalid Userid !!</p>
+            </div>
+
+                <div class="mb-3">
+                    <label for="example" class="form-label">Event</label>
+                    <input type="text" class="form-control" id="example" formControlName="events">
+
+                </div>
+                <div *ngIf="(eventForm.get('events')?.touched||eventForm.get('events')?.dirty)&&
+                eventForm.get('events')?.errors">
+                <p>*Please Enter an Event !!</p>
+            </div>
+
+                <div class="mb-3">
+                    <label for="example1" class="form-label">Date</label>
+                    <input type="date" class="form-control" id="example1" formControlName="date">
+
+                </div>
+                <div *ngIf="(eventForm.get('date')?.touched||eventForm.get('date')?.dirty)&&
+                eventForm.get('date')?.errors">
+                <p>*Please Enter a Date !!</p>
+            </div>
+
+
+           
+
+                <br><br>
+                <div class="one">
+                    <button type="button" class="btn btn-primary" (click)="save()">Save</button>
+                    &nbsp; &nbsp; &nbsp;
+                    <button type="button" class="btn btn-primary" (click)="back()">Back</button>
+                </div>
+
+
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+
+</div>
+</section>

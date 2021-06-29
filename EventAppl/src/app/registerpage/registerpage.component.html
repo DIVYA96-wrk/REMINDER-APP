@@ -1,0 +1,63 @@
+<section>
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="box">
+        <div class="square" style="--i:0"></div>
+        <div class="square" style="--i:1"></div>
+        <div class="square" style="--i:2"></div>
+        <div class="square" style="--i:3"></div>
+        <div class="square" style="--i:4"></div>
+<div class="container">
+    <div class="form">
+            <h2>Yours Daily Events!!!</h2>
+            <h6>Register Form</h6>
+            <form [formGroup]="registerForm" (ngSubmit)="register()">
+                 
+
+                <div class="mb-3 inputBox">
+                    
+                    <input type="text" class="form-control" id="example" formControlName="userid" placeholder="Userid">
+
+                </div>
+                <div *ngIf="(registerForm.get('userid')?.touched||registerForm.get('userid')?.dirty)&&
+                registerForm.get('userid')?.errors">
+                    <p>*Invalid Userid!!</p>
+                </div>
+
+                <div class="mb-3 inputBox">
+                 
+                    <input type="text" class="form-control" id="example1" formControlName="username" placeholder="Username">
+
+                </div>
+                <div *ngIf="(registerForm.get('username')?.touched||registerForm.get('username')?.dirty)&&
+                registerForm.get('username')?.errors">
+                    <p>*Invalid Username!!</p>
+                </div>
+
+
+                <div class="mb-3 inputBox">
+                   
+                    <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password" placeholder="Password">
+                </div>
+                <div
+                    *ngIf="(registerForm.get('password')?.touched || registerForm.get('password')?.dirty) && registerForm.get('password')?.errors">
+                    <p>*Invalid Password!!</p>
+
+                </div> <br> 
+
+                <div ><button type="submit" class="btn btn-primary onee">Create an Account</button></div>
+                <br>
+                <p class="accquestion"> Already Have An Account?</p> <br>
+                <div>
+                    <button type="button" class="btn btn-primary onee" (click)="login()">Log In</button>
+                </div>
+
+
+
+            </form>
+        </div>
+       </div>
+    </div>
+
+</section>
